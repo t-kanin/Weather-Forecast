@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="Alamofire_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="City" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="6lp-MT-Gly">
+                                <rect key="frame" x="20" y="134" width="374" height="55.5"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="45"/>
+                                <textInputTraits key="textInputTraits" textContentType="address-level2"/>
+                            </textField>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="-" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="gW0-0C-Tup">
+                                <rect key="frame" x="20" y="211.5" width="374" height="50"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jel-Sc-a0j">
+                                <rect key="frame" x="20" y="78" width="295" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="8l7-Wn-4ah"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEU-Mf-FJn">
+                                <rect key="frame" x="335" y="74" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="j2R-Ab-lOZ"/>
+                                    <constraint firstAttribute="width" constant="40" id="nGf-lk-Txr"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="forebastWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LKE-7o-tXq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="CELCIUS" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Eeq-FT-nOX">
+                                <rect key="frame" x="20" y="289" width="355" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jel-Sc-a0j" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="GK6-ie-5wf"/>
+                            <constraint firstItem="JEU-Mf-FJn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="PbM-mg-LGq"/>
+                            <constraint firstItem="gW0-0C-Tup" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="TgL-4E-hsv"/>
+                            <constraint firstItem="gW0-0C-Tup" firstAttribute="top" secondItem="6lp-MT-Gly" secondAttribute="bottom" constant="22" id="V69-vW-xvS"/>
+                            <constraint firstItem="JEU-Mf-FJn" firstAttribute="leading" secondItem="jel-Sc-a0j" secondAttribute="trailing" constant="20" id="YJ7-DP-xcJ"/>
+                            <constraint firstItem="6lp-MT-Gly" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eCf-Ee-rL4"/>
+                            <constraint firstItem="jel-Sc-a0j" firstAttribute="leading" secondItem="gW0-0C-Tup" secondAttribute="leading" id="moT-l8-zFz"/>
+                            <constraint firstItem="6lp-MT-Gly" firstAttribute="top" secondItem="JEU-Mf-FJn" secondAttribute="bottom" constant="20" id="rn7-EE-bMg"/>
+                            <constraint firstItem="jel-Sc-a0j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rvM-c1-QzG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6lp-MT-Gly" secondAttribute="trailing" constant="20" id="zbg-qe-4lP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gW0-0C-Tup" secondAttribute="trailing" constant="20" id="zwN-OH-IFx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="6lp-MT-Gly" id="AF9-c3-2l4"/>
+                        <outlet property="scaleTextField" destination="Eeq-FT-nOX" id="WZd-ra-VHJ"/>
+                        <outlet property="searchtextField" destination="jel-Sc-a0j" id="AIJ-FT-ygk"/>
+                        <outlet property="tempTextField" destination="gW0-0C-Tup" id="D2K-F3-GM9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
