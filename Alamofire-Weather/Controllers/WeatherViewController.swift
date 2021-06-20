@@ -40,7 +40,7 @@ class WeatherViewController: UIViewController {
         }
         
     }
-    
+    /// callback function when the search is tapped
     @IBAction func forebastWeather(_ sender: Any) {
         if let city = searchtextField.text{
             forecast(city)
